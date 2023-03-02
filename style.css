@@ -1,3 +1,66 @@
+
 div {
+    /* border: solid black 1px; */
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.main-wrapper {
+    width: 317px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+    
     border: solid black 1px;
+    background-color: whitesmoke;
+    
+}
+.buttons-wrapper, .upper-row, .lcd{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 4px;
+    
+    
+}
+.upper-row {
+    width: 308px;
+}
+.upper-row button {
+    width: 72px;
+    height: 36px;
+    font-size: 28px;
+}
+.buttons-wrapper button {
+    margin-bottom: 5px; 
+}
+.operators {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: right;
+    
+}
+button {
+    width: 72px;
+    height: 72px;
+    font-size: 48px;
+    background-color: lightgray;   
+}
+.clear {
+    background-color: red;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+.lcd {
+    height: 90px;
+    width: 299px;
+    margin-left: 5px;
+    font-size: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: whitesmoke;
 }
