@@ -10,18 +10,18 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <div class="lcd">
-            <!-- 0123456789.0 -->
-            <p id="lcd-screen">
-
-            </p>
+        <div id="lcd-screen" class="lcd">
+           
         </div>
         <div class="upper-row">
-            <button id="clear-button" class="clear"> C </button> <button>&#8730;</button> <button>&#177;</button> <button>&#37;</button>
+            <button id="clear-button" class="clear">AC</button> 
+            <button>&#8730;</button> 
+            <button>&#177;</button> 
+            <button>&#37;</button>
+            <button id="clear-entry-button">CE</button>
         </div>
         <div class="buttons-wrapper">
-            <div class="numerals">
-                
+            <div class="numerals">             
                 <button id="num7"> 7 </button> 
                 <button id="num8"> 8 </button> 
                 <button id="num9"> 9 </button> 
@@ -45,16 +45,24 @@
         </div>
     </div>
     <script>
-        const node = document.createElement("div");
-        function myFunction() {
+        // const node = document.createElement("div");
+        // node.id="numbers";
+        // function myFunction() {
+        // const textnode = document.createTextNode("");       
+        // node.appendChild(textnode);
+        // document.getElementById("lcd-screen").appendChild(node);
+        // console.log("*")
+        // }
+       // myFunction();
 
-        const textnode = document.createTextNode(" ");
+        function myClearFunction() {
+        // const list = document.getElementById("lcd-screen");
+        // console.log(list.firstElementChild)
+        // list.removeChild(list.firstElementChild);
+        const element = document.getElementById("calculator");
+        element.innerHTML = '';
         
-        
-        node.appendChild(textnode);
-        document.getElementById("lcd-screen").appendChild(node);
-        }
-        myFunction();
+}
         </script>
 </body>
 </html>
