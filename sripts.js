@@ -42,11 +42,19 @@ function operate(operation, numberOne, numberTwo){
 //populating the calculator LCD screen
 const node = document.createElement("div");
 node.id="calculator";
+const node2 = document.createElement("div");
+node2.id="calculator-2nd-row";
 function appendNumber(theNumber) {   
         // Create a text node:
     const textnode = document.createTextNode(theNumber);
-    node.appendChild(textnode);     
+    node.appendChild(textnode);  
     document.getElementById("lcd-screen").appendChild(node);
+}
+function appendNumberSecondRow(theNumber) {   
+  // Create a text node:
+const textnode = document.createTextNode(theNumber);  
+node2.appendChild(textnode);
+document.getElementById("lcd-screen-2nd-row").appendChild(node2);
 }
 
 // populating the numbers keypad with event listeners:
@@ -61,6 +69,7 @@ function appendNumber(theNumber) {
         "click",
         function () {
           appendNumber(i);
+          appendNumberSecondRow(i);
         }
     );
 }
@@ -77,6 +86,8 @@ clearButton.addEventListener(
 function myClearFunction() { 
   const element = document.getElementById("calculator");
   element.innerHTML = '';
+  const element2 = document.getElementById("calculator-2nd-row");
+  element2.innerHTML = '';
 }
 // Delete Last Digit (CE) button logic
 
@@ -86,6 +97,8 @@ clearEntryButton.addEventListener(
   function(){
     const element = document.getElementById("calculator");
     element.removeChild(element.lastChild);
+    const element2 = document.getElementById("calculator-2nd-row");
+    element2.removeChild(element2.lastChild);
   }
 )
 

@@ -16,15 +16,14 @@ body {
     
     border: solid black 1px;
     background-color: whitesmoke;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     
 }
-.buttons-wrapper, .upper-row, .lcd{
+.buttons-wrapper, .upper-row, .lcd, .lcd-second-row{
     display: flex;
     flex-direction: row;
     gap: 8px;
-    padding: 4px;
-    
-    
+    padding: 4px;  
 }
 .upper-row {
     width: 308px;
@@ -56,11 +55,22 @@ button {
     font-weight: bolder;
 }
 .lcd {
-    height: 90px;
+    height: 60px;
     width: 299px;
     margin-left: 5px;
     font-size: 48px;
+    justify-content: right;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: black;
     color: whitesmoke;
+}
+.lcd-second-row {
+    height: 30px;
+    width: 299px;
+    margin-left: 5px;
+    font-size: 22px;
+    justify-content: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: gray;
 }
