@@ -75,6 +75,7 @@ document.getElementById("lcd-screen-2nd-row").appendChild(node2);
 }
 
 // All Clear button logic
+
 const clearButton = document.getElementById("clear-button");
 clearButton.addEventListener(
     "click",
@@ -85,9 +86,12 @@ clearButton.addEventListener(
 
 function myClearFunction() { 
   const element = document.getElementById("calculator");
-  element.innerHTML = '';
   const element2 = document.getElementById("calculator-2nd-row");
-  element2.innerHTML = '';
+  if (element != null && element2 != null){
+    element.innerHTML = '';
+    element2.innerHTML = '';
+  }
+  
 }
 // Delete Last Digit (CE) button logic
 
@@ -96,9 +100,12 @@ clearEntryButton.addEventListener(
   "click",
   function(){
     const element = document.getElementById("calculator");
-    element.removeChild(element.lastChild);
     const element2 = document.getElementById("calculator-2nd-row");
-    element2.removeChild(element2.lastChild);
+
+    if (element !== null && element2 !== null && element.childNodes.length !== 0 && element2.childNodes.length !== 0){
+      element.removeChild(element.lastChild); 
+      element2.removeChild(element2.lastChild); 
+    } 
   }
 )
 

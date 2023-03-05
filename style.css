@@ -48,11 +48,18 @@ button {
     height: 72px;
     font-size: 48px;
     background-color: lightgray;   
+    border-radius: 5px;
 }
 .clear {
     background-color: red;
     color: whitesmoke;
     font-weight: bolder;
+}
+.backspace {
+    background-color: rgb(17, 1, 1);
+    color: whitesmoke;
+    font-weight: bolder;
+    
 }
 .lcd {
     height: 60px;
